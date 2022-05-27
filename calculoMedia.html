@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title> Cálculo de Média </title>
+</head>
+	<body>
+		<h1> Cálculo de Média </h1>
+
+		<p>Digite a primeira nota: <input type="number" id="nota1"></p>
+		<p>Digite a segunda nota: <input type="number" id="nota2"></p>
+		<p>Digite a terceira nota: <input type="number" id="nota3"></p>
+        
+        <button onclick="media()">Calcular</button>
+
+        <p> Sua média é: <span id="showMedia"></span></p>
+
+		<script type="text/javascript">
+
+            function media(){
+                var nota1 = parseFloat(document.getElementById("nota1").value);
+                var nota2 = parseFloat(document.getElementById("nota2").value);
+                var nota3 = parseFloat(document.getElementById("nota3").value);
+
+                showMedia = document.getElementById("showMedia");
+            
+                var media = (nota1 + nota2 + nota3) / 3 ;
+                showMedia.innerHTML = media;
+
+                if(media >= 6 ){
+                    alert("Aprovado!")
+                } 
+
+                else{
+                    alert("Reprovado!")
+                } 
+            }
+
+         </script>
+	</body>
+</html>
