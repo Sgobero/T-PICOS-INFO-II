@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title> Idade do Nadador </title>
+</head>
+	<body>
+		<h1> Idade do Nadador </h1>
+
+		<p>Digite sua idade: <input type="text" id="idade"></p>
+
+		<button id="calculo">Calcular</button>
+
+		<script type="text/javascript">
+			calculo = document.getElementById("calculo");
+			idade = document.getElementById("idade");
+
+			calculo.onclick = function(){
+				if(idade.value != ""){
+
+                    idadeCalc = idade.value;
+
+					if(idadeCalc < 5){ alert("Idade insuficiente!"); }
+                    if(idadeCalc >= 5 && idadeCalc <= 7 ){ alert("Modalidade Infantil A!"); }
+                    if(idadeCalc >= 8 && idadeCalc <= 10){ alert("Modalidade Infantil B!"); }
+                    if(idadeCalc >= 11 && idadeCalc <= 13){ alert("Modalidade Juvenil A!"); }
+                    if(idadeCalc >= 14 && idadeCalc <= 17){ alert("Modalidade Juvenil B!"); }
+					else if(idadeCalc >= 18 ){ alert("Modalidade Adulto!"); }
+
+				}else{
+					alert("Insira os valores para o cálculo!")
+				}
+			};
+		</script>
+	</body>
+</html>
